@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\rcc.o"
+".\objects\helperv2.o"
+".\objects\uart.o"
+".\objects\i2c.o"
+".\objects\mpu6050.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\MPU6050_I2C.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MPU6050_I2C.map" -o .\Objects\MPU6050_I2C.axf
